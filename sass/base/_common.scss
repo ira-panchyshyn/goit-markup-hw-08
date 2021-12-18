@@ -1,0 +1,33 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.link {
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.paragraph-common {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
