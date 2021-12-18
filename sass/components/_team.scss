@@ -3,8 +3,9 @@
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    // font-size: 36px;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
@@ -29,8 +30,8 @@
   }
 
   &__list {
-    display: flex;
-    flex-basis: calc(100% / 4 - var(--card-gap));
+    // display: flex;
+    // flex-basis: calc(100% / 4 - var(--card-gap));
   }
 
   &__item {
@@ -40,12 +41,18 @@
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-      margin-right: var(--card-gap);
+      // margin-right: var(--card-gap);
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
     }
   }
 
   &__card {
     padding-top: 30px;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
+    padding-bottom: 24px;
   }
 }

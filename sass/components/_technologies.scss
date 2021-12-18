@@ -13,16 +13,19 @@
   }
 
   &__list {
-    display: flex;
-    flex-basis: calc(100% / 3 - var(--card-gap));
-    margin-right: calc(-1 * var(--card-gap));
+    // display: flex;
+    // flex-basis: calc(100% / 3 - var(--card-gap));
+    // margin-right: calc(-1 * var(--card-gap));
   }
 
   &__item {
     position: relative;
 
     &:not(:last-child) {
-      margin-right: var(--card-gap);
+      // margin-right: var(--card-gap);
+    }
+    img {
+      width: 100%;
     }
   }
 
