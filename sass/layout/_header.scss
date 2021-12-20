@@ -1,9 +1,11 @@
 .header {
   background-color: var(--main-background-color);
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
   padding: 16px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 25px 0;
+  }
 
   .header-button__close {
     @media screen and (min-width: $tablet) {
@@ -115,7 +117,15 @@
   }
 
   &__logo {
-    margin-right: 93px;
+    // margin-right: 93px;
+    @media screen and (min-width: $tablet) {
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 94px;
+      font-size: 26px;
+    }
   }
 
   &__icon {
