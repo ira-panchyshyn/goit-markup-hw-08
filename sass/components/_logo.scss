@@ -4,7 +4,15 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  display: block;
+  // display: block;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 94px;
+  }
 
   &--accent {
     color: var(--accent-color);

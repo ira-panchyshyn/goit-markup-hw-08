@@ -3,29 +3,72 @@
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+  padding: 16px 0;
 
-  &__list {
-    display: flex;
-    align-items: center;
+  .header-button__close {
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
   }
 
-  &__item:not(:last-child),
-  &__contacts li:first-child {
+  &__list {
+    // display: flex;
+
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      margin-left: auto;
+      // align-items: center;
+    }
+  }
+
+  &__item:not(:last-child)
+  // &__contacts li:first-child
+  {
     margin-right: 50px;
   }
 
   &__contacts {
     margin-left: auto;
+    @media screen and (min-width: $tablet) {
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      // align-items: center;
+    }
+
+    li:first-child {
+      @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        margin-bottom: 10px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        margin-right: 50px;
+      }
+    }
   }
 
   &__navigation {
-    display: flex;
+    // display: flex;
     align-items: center;
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
   }
 
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: flex-start;
+    }
   }
 
   &__link {
