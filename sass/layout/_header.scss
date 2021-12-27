@@ -7,10 +7,28 @@
     padding: 25px 0;
   }
 
-  .header-button__close {
+  .header-button__open {
+    padding: 0;
+    background: none;
+    color: var(--main-text-color);
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
     @media screen and (min-width: $tablet) {
       display: none;
     }
+  }
+
+  .header-button__icon {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
   }
 
   &__list {
@@ -141,5 +159,79 @@
   &__phone-icon {
     width: 10px;
     height: 16px;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: var(--main-background-color);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  padding: 48px 0;
+
+  &__container {
+    width: 400px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  &__contacts {
+  }
+
+  &__close-btn {
+    background: none;
+    padding: 0;
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: var(--main-text-color);
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
+  &__close-icon {
+    fill: currentColor;
+    width: 19px;
+    height: 19px;
   }
 }
