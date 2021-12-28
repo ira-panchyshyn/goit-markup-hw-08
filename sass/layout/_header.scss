@@ -170,6 +170,12 @@
   height: 100vh;
   z-index: 1;
   padding: 48px 0;
+  transform: scale(1.2) translate(-100%);
+  transition: transform 1000ms;
+
+  &.is-open {
+    transform: scale(1) translate(0%);
+  }
 
   &__container {
     width: 400px;
@@ -189,7 +195,7 @@
     font-size: 34px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    color: var(--paragraph-text-color);
+    color: var(--accent-color);
   }
 
   &__mail {
@@ -203,6 +209,15 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 32px;
+    }
+  }
+  &__phone,
+  &__mail,
+  &__social-link {
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+      box-shadow: 0px 4px 4px rgba(33, 150, 243, 0.15);
     }
   }
 
@@ -224,7 +239,35 @@
     }
   }
 
-  &__contacts {
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+  }
+
+  &__social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+
+  &__social-item {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
   }
 
   &__close-btn {
