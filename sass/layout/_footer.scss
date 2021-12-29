@@ -38,28 +38,28 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
     }
   }
 
   &__social {
-    margin-left: auto;
-
     @media screen and (min-width: $tablet) {
-      padding-top: 5px;
     }
 
     @media screen and (min-width: $desktop) {
-      padding-top: 12px;
     }
   }
 
   &__subscribe {
-    margin: 0 auto;
+    // margin: 0 auto;
 
     @media screen and (min-width: $desktop) {
       margin-right: 0;
-      margin-left: auto;
-      padding-top: 12px;
+      // margin-left: auto;
     }
   }
 

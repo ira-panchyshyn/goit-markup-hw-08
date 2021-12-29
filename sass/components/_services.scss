@@ -1,6 +1,5 @@
 .services {
   @include hero-image("../images/hero/hero.jpg");
-  background-color: var(--dark-background-color);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
